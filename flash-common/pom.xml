@@ -19,5 +19,10 @@
             <artifactId>hibernate-validator</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus</artifactId>
+            <version>${myBatis.plus.version}</version>
+        </dependency>
     </dependencies>
 </project>

@@ -1,4 +1,4 @@
-package com.flash.common.model;
+package com.flash.common.dto;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;

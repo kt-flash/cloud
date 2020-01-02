@@ -1,4 +1,4 @@
-package com.flash.dto.req;
+package com.flash.common.dto.req;
 
 import com.flash.common.validator.annotation.Fax;
 import com.flash.common.validator.annotation.Telephone;

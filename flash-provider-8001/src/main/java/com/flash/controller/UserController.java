@@ -2,11 +2,11 @@ package com.flash.controller;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
-import com.flash.common.model.PageResultDto;
+import com.flash.common.dto.BaseResult;
+import com.flash.common.dto.PageResultDto;
+import com.flash.common.dto.req.ReqUserGroupDto;
+import com.flash.common.dto.req.ReqUserQueryDto;
 import com.flash.common.validator.group.ValidationGroup1;
-import com.flash.dto.BaseResult;
-import com.flash.dto.req.ReqUserGroupDto;
-import com.flash.dto.req.ReqUserQueryDto;
 import com.flash.entity.User;
 import com.flash.service.UserService;
 import org.springframework.beans.BeanUtils;
@@ -30,10 +30,21 @@ public class UserController {
     @Autowired
     private UserService userService;
 
+    /**
+     * 添加用户-服务提供者
+     * @param user
+     * @return
+     */
+    @RequestMapping(value = "add", method = RequestMethod.POST)
+    public User add(@RequestBody User user){
+        userService.save(user);
+        return user;
+    }
+
 
     @RequestMapping(value = "save", method = RequestMethod.POST)
     public BaseResult save(@RequestBody @Validated(value = {ValidationGroup1.class}) ReqUserGroupDto reqUserDto,
-                               BindingResult result) {
+                           BindingResult result) {
         if(result != null && result.hasErrors()){
             for (ObjectError error : result.getAllErrors()) {
                 return BaseResult.buildTipErrorResult(error.getDefaultMessage());

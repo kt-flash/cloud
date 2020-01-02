@@ -14,6 +14,7 @@
         <module>flash-dao</module>
         <module>flash-es</module>
         <module>flash-common</module>
+        <module>flash-consumer-80</module>
     </modules>
 
 

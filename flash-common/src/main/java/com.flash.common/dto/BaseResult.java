@@ -1,4 +1,4 @@
-package com.flash.dto;
+package com.flash.common.dto;
 
 import com.flash.common.model.CodeEnum;
 import lombok.Data;

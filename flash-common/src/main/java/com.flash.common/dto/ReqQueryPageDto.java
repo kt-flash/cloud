@@ -1,4 +1,4 @@
-package com.flash.dto;
+package com.flash.common.dto;
 
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import lombok.Data;

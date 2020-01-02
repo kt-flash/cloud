@@ -1,6 +1,6 @@
-package com.flash.dto.req;
+package com.flash.common.dto.req;
 
-import com.flash.dto.ReqQueryPageDto;
+import com.flash.common.dto.ReqQueryPageDto;
 import lombok.Data;
 
 /**
