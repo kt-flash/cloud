@@ -1,5 +1,5 @@
 server:
-  port: 8080
+  port: 8001
   servlet:
     session:
       timeout: 60m
@@ -10,6 +10,8 @@ elasticsearch:
   ip: 127.0.0.1:9200
 
 spring:
+  application:
+    name: flash-provider-8001
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
     driver-class-name: com.mysql.cj.jdbc.Driver

@@ -10,7 +10,7 @@
     <version>1.0-SNAPSHOT</version>
 
     <modules>
-        <module>flash-web</module>
+        <module>flash-provider-8001</module>
         <module>flash-dao</module>
         <module>flash-es</module>
         <module>flash-common</module>
@@ -34,7 +34,7 @@
 
             <dependency>
                 <groupId>com.flash</groupId>
-                <artifactId>flash-web</artifactId>
+                <artifactId>flash-provider-8001</artifactId>
                 <version>${flash.version}</version>
             </dependency>
             <dependency>
