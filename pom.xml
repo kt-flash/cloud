@@ -15,6 +15,9 @@
         <module>flash-es</module>
         <module>flash-common</module>
         <module>flash-consumer-80</module>
+        <module>flash-eureka-7001</module>
+        <module>flash-eureka-7002</module>
+        <module>flash-eureka-7003</module>
     </modules>
 
 
@@ -166,6 +169,16 @@
     </dependencies>
 
     <build>
+        <finalName>flash-parent</finalName>
+        <resources>
+            <resource>
+                <!-- 允许访问src/main/resources下的内容 -->
+                <directory>src/main/resources</directory>
+                <!-- 过滤开启 -->
+                <filtering>true</filtering>
+            </resource>
+        </resources>
+
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -175,7 +188,20 @@
                     <target>1.8</target>
                 </configuration>
             </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <configuration>
+                    <delimiters>
+                        <!-- 在$符号开始$符号结尾的src/main/resources下的内容都可访问 -->
+                        <delimiter>$</delimiter>
+                    </delimiters>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
+
+
 
 </project>

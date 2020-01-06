@@ -1,2 +1,5 @@
 server:
   port: 80
+rest:
+  url:
+    prefix: http://localhost:8001

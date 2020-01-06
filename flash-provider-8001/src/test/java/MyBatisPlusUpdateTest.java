@@ -1,6 +1,6 @@
 import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
 import com.flash.entity.User;
-import com.flash.main.Application;
+import com.flash.main.ProviderApplication;
 import com.flash.mapper.UserMapper;
 import com.flash.service.UserService;
 import org.junit.Test;
@@ -20,7 +20,7 @@ import java.util.Map;
  */
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@SpringBootTest(classes = Application.class)
+@SpringBootTest(classes = ProviderApplication.class)
 @WebAppConfiguration
 public class MyBatisPlusUpdateTest {
 

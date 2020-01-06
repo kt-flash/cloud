@@ -6,6 +6,19 @@ server:
   tomcat:
     uri-encoding: utf-8
 
+eureka:
+  client:
+    # 注册到Eureka的注册中心
+    register-with-eureka: true
+    # 获取注册实例列表
+    fetch-registry: true
+    service-url:
+      # 配置注册中心地址
+      defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka,http://eureka7003.com:7003/eureka
+  instance:
+    instance-id: flash-provider-8001
+    prefer-ip-address: true
+
 elasticsearch:
   ip: 127.0.0.1:9200
 
@@ -65,3 +78,8 @@ logging:
     com.flash.mapper: trace
   pattern: '%p%m%n'
 
+info:
+  app.name: flash-cloud
+  company.name: www.flash.com
+  build.artifactId: $project.artifactId$
+  build.version: $project.version$

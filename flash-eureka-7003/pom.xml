@@ -9,21 +9,13 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>flash-consumer-80</artifactId>
-    <packaging>war</packaging>
+    <artifactId>flash-eureka-7003</artifactId>
 
     <dependencies>
+        <!-- SpringCloud Eureka 注册中心依赖 -->
         <dependency>
-            <groupId>com.flash</groupId>
-            <artifactId>flash-dao</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.flash</groupId>
-            <artifactId>flash-es</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.flash</groupId>
-            <artifactId>flash-common</artifactId>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
         </dependency>
 
         <dependency>
@@ -43,14 +35,5 @@
             <artifactId>spring-boot-starter-jetty</artifactId>
         </dependency>
 
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
-        </dependency>
-
-
     </dependencies>
-
 </project>

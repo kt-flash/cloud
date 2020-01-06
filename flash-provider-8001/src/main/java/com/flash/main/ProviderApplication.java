@@ -3,6 +3,7 @@ package com.flash.main;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 /**
@@ -12,10 +13,11 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @SpringBootApplication(scanBasePackages={"com.flash"})
 @EnableTransactionManagement
 @MapperScan("com.flash.mapper")
-public class Application {
+@EnableDiscoveryClient
+public class ProviderApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(Application.class, args);
+        SpringApplication.run(ProviderApplication.class, args);
     }
 
 }
