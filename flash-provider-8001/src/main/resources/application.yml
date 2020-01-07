@@ -24,7 +24,7 @@ elasticsearch:
 
 spring:
   application:
-    name: flash-provider-8001
+    name: flash-provider
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
     driver-class-name: com.mysql.cj.jdbc.Driver

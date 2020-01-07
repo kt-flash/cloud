@@ -1,4 +1,4 @@
-package com.flash.controller;
+package com.flash.cloud.controller;
 
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.flash.common.dto.BaseResult;
@@ -13,10 +13,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.ObjectError;
 import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 
 /**
@@ -68,9 +65,9 @@ public class UserConsumerController {
                 page.getPages(), page.getSize(), page.getRecords()));
     }
 
-    @RequestMapping(value = "get", method = RequestMethod.GET)
-    public BaseResult get(String id) {
-        User user = restTemplate.getForObject(REST_URL_PREFIX + "/user/get?id=" + id, User.class);
+    @RequestMapping(value = "get/{id}", method = RequestMethod.GET)
+    public BaseResult get(@PathVariable String id) {
+        User user = restTemplate.getForObject(REST_URL_PREFIX + "/user/get/" + id, User.class);
         return BaseResult.buildSuccessResult(user);
     }
 

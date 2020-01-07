@@ -1,4 +1,4 @@
-import com.flash.main.ProviderApplication;
+import com.flash.main.ProviderApplication8001;
 import org.elasticsearch.client.RestHighLevelClient;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -14,7 +14,7 @@ import org.springframework.test.context.web.WebAppConfiguration;
  */
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@SpringBootTest(classes = ProviderApplication.class)
+@SpringBootTest(classes = ProviderApplication8001.class)
 @WebAppConfiguration
 public class ElasticsearchTest {
 

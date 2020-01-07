@@ -42,6 +42,8 @@ public class User implements Serializable {
 
     private Long managerId;
 
+    private String dbSource;
+
     @Version //实现乐观锁，更新时验证version
     private Integer version;
 

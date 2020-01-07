@@ -14,10 +14,10 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @EnableTransactionManagement
 @MapperScan("com.flash.mapper")
 @EnableDiscoveryClient
-public class ProviderApplication {
+public class ProviderApplication8002 {
 
     public static void main(String[] args) {
-        SpringApplication.run(ProviderApplication.class, args);
+        SpringApplication.run(ProviderApplication8002.class, args);
     }
 
 }

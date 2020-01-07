@@ -18,6 +18,9 @@
         <module>flash-eureka-7001</module>
         <module>flash-eureka-7002</module>
         <module>flash-eureka-7003</module>
+        <module>flash-provider-8002</module>
+        <module>flash-provider-8003</module>
+        <module>flash-consumer-feign</module>
     </modules>
 
 
@@ -31,6 +34,7 @@
         <lombok.version>1.18.10</lombok.version>
         <myBatis.plus.version>3.3.0</myBatis.plus.version>
         <elasticsearch.version>7.5.0</elasticsearch.version>
+        <commons-lang3.version>3.9</commons-lang3.version>
     </properties>
 
     <dependencyManagement>
@@ -131,7 +135,7 @@
             <dependency>
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-lang3</artifactId>
-                <version>3.9</version>
+                <version>${commons-lang3.version}</version>
             </dependency>
 
             <dependency>

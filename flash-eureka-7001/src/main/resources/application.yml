@@ -4,7 +4,7 @@ server:
 
 spring:
   application:
-    name: eureka-server
+    name: eureka-server-7001
 
 eureka:
   #eureka实例定义

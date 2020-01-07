@@ -1,5 +1,6 @@
-package com.flash.config;
+package com.flash.cloud.config;
 
+import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.client.RestTemplate;
@@ -12,7 +13,17 @@ import org.springframework.web.client.RestTemplate;
 public class ConfigBean {
 
     @Bean
+    //Ribbon负载均衡
+    @LoadBalanced
     public RestTemplate restTemplate(){
         return new RestTemplate();
     }
+
+    //默认轮询算法
+    /*@Bean
+    public IRule rule(){
+        //随机算法
+        //return new RandomRule();
+        return new RoundRobinRule();
+    }*/
 }
