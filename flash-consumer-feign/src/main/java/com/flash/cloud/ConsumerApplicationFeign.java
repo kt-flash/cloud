@@ -5,6 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.cloud.openfeign.EnableFeignClients;
+import org.springframework.context.annotation.ComponentScan;
 
 /**
  * @Author: LiLiang
@@ -12,7 +13,8 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
  */
 @SpringBootApplication(exclude= {DataSourceAutoConfiguration.class})
 @EnableEurekaClient
-@EnableFeignClients
+@EnableFeignClients(basePackages = {"com.flash"})
+@ComponentScan("com.flash")
 public class ConsumerApplicationFeign {
 
     public static void main(String[] args) {

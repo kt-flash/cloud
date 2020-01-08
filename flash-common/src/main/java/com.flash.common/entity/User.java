@@ -1,4 +1,4 @@
-package com.flash.entity;
+package com.flash.common.entity;
 
 import com.baomidou.mybatisplus.annotation.*;
 import com.fasterxml.jackson.annotation.JsonFormat;

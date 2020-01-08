@@ -13,14 +13,7 @@
     <packaging>war</packaging>
 
     <dependencies>
-        <dependency>
-            <groupId>com.flash</groupId>
-            <artifactId>flash-dao</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.flash</groupId>
-            <artifactId>flash-es</artifactId>
-        </dependency>
+
         <dependency>
             <groupId>com.flash</groupId>
             <artifactId>flash-common</artifactId>

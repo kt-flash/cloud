@@ -1,7 +1,7 @@
 package com.flash.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.flash.entity.User;
+import com.flash.common.entity.User;
 
 /**
  * @Author: LiLiang

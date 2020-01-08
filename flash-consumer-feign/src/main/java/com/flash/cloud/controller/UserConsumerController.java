@@ -1,13 +1,13 @@
 package com.flash.cloud.controller;
 
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.flash.cloud.service.UserClientService;
 import com.flash.common.dto.BaseResult;
 import com.flash.common.dto.PageResultDto;
 import com.flash.common.dto.req.ReqUserGroupDto;
 import com.flash.common.dto.req.ReqUserQueryDto;
+import com.flash.common.entity.User;
+import com.flash.common.service.UserClientService;
 import com.flash.common.validator.group.ValidationGroup1;
-import com.flash.entity.User;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.BindingResult;
