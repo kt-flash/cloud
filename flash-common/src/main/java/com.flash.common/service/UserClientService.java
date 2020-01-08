@@ -26,4 +26,10 @@ public interface UserClientService {
 
     @RequestMapping(value = "get/{id}", method = RequestMethod.GET)
     User get(@PathVariable("id") String id);
+
+    @RequestMapping(value = "delete/{id}", method = RequestMethod.GET)
+    boolean delete(@PathVariable("id") String id);
+
+    @RequestMapping(value = "update", method = RequestMethod.POST)
+    User update(@RequestBody User user);
 }

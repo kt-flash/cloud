@@ -78,6 +78,7 @@ logging:
     com.flash.mapper: trace
   pattern: '%p%m%n'
 
+#Eureka中的服务介绍
 info:
   app.name: flash-cloud
   company.name: www.flash.com

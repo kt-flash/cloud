@@ -31,6 +31,16 @@ public class UserController {
         return user;
     }
 
+    @RequestMapping(value = "update", method = RequestMethod.POST)
+    public User update(@RequestBody User user){
+        userService.updateById(user);
+        return user;
+    }
+
+    @RequestMapping(value = "delete/{id}", method = RequestMethod.GET)
+    public boolean delete(@PathVariable("id") String id){
+        return userService.removeById(id);
+    }
 
     @RequestMapping(value = "pageList", method = RequestMethod.POST)
     public Page pageList(@RequestBody @Validated ReqUserQueryDto reqUserDto) {

@@ -48,6 +48,33 @@ public class UserConsumerController {
         return BaseResult.buildSuccessResult(user2);
     }
 
+    /**
+     * 更新用户-服务消费者
+     * @param reqUserDto
+     * @param result
+     * @return
+     */
+    @RequestMapping(value = "update", method = RequestMethod.POST)
+    public BaseResult update(@RequestBody @Validated ReqUserGroupDto reqUserDto,
+                          BindingResult result) {
+        if(result != null && result.hasErrors()){
+            for (ObjectError error : result.getAllErrors()) {
+                return BaseResult.buildTipErrorResult(error.getDefaultMessage());
+            }
+        }
+        User user = new User();
+        BeanUtils.copyProperties(reqUserDto, user);
+
+        User user2 = userClientService.update(user);
+        return BaseResult.buildSuccessResult(user2);
+    }
+
+    /**
+     * 分页查询User
+     * @param reqUserDto
+     * @param result
+     * @return
+     */
     @RequestMapping(value = "pageList", method = RequestMethod.POST)
     public BaseResult pageList(@RequestBody @Validated ReqUserQueryDto reqUserDto,
                                BindingResult result) {
@@ -62,10 +89,26 @@ public class UserConsumerController {
                 page.getPages(), page.getSize(), page.getRecords()));
     }
 
+    /**
+     * 根据id查询User
+     * @param id
+     * @return
+     */
     @RequestMapping(value = "get/{id}", method = RequestMethod.GET)
     public BaseResult get(@PathVariable String id) {
         User user = userClientService.get(id);
         return BaseResult.buildSuccessResult(user);
+    }
+
+    /**
+     * 逻辑删除User
+     * @param id
+     * @return
+     */
+    @RequestMapping(value = "delete/{id}", method = RequestMethod.GET)
+    public BaseResult delete(@PathVariable String id) {
+        boolean isDeleted = userClientService.delete(id);
+        return BaseResult.buildSuccessResult(isDeleted);
     }
 
 }

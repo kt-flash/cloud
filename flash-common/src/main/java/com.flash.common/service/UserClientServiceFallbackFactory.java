@@ -7,6 +7,7 @@ import feign.hystrix.FallbackFactory;
 import org.springframework.stereotype.Component;
 
 /**
+ * 设置服务异常时默认响应
  * @Author: LiLiang
  * @Date: 2020/1/8 11:01
  */
@@ -28,6 +29,16 @@ public class UserClientServiceFallbackFactory implements FallbackFactory<UserCli
             @Override
             public User get(String id) {
                 return new User().setName("UserClientServiceFallbackFactory get error");
+            }
+
+            @Override
+            public User update(User user) {
+                return null;
+            }
+
+            @Override
+            public boolean delete(String id) {
+                return false;
             }
         };
     }
