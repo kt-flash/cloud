@@ -4,7 +4,7 @@ import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.flash.common.entity.User;
-import com.flash.main.ProviderApplication8001;
+import com.flash.ProviderApplication8001;
 import com.flash.mapper.UserMapper;
 import com.flash.service.UserService;
 import org.junit.Test;

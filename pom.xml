@@ -21,6 +21,7 @@
         <module>flash-provider-8002</module>
         <module>flash-provider-8003</module>
         <module>flash-consumer-feign</module>
+        <module>flash-consumer-hystrix-dashboard</module>
     </modules>
 
 

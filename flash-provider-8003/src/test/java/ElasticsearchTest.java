@@ -1,4 +1,4 @@
-import com.flash.main.ProviderApplication8003;
+import com.flash.ProviderApplication8003;
 import org.elasticsearch.client.RestHighLevelClient;
 import org.junit.Test;
 import org.junit.runner.RunWith;

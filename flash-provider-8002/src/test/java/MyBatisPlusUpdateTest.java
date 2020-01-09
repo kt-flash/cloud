@@ -1,6 +1,6 @@
 import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
 import com.flash.common.entity.User;
-import com.flash.main.ProviderApplication8002;
+import com.flash.ProviderApplication8002;
 import com.flash.mapper.UserMapper;
 import com.flash.service.UserService;
 import org.junit.Test;

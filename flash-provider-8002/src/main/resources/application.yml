@@ -84,3 +84,10 @@ info:
   company.name: www.flash.com
   build.artifactId: $project.artifactId$
   build.version: $project.version$
+
+#熔断器DashBoard：actuator在springboot2.0调整后开关 web端点的配置，"*"代表开启所有
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
