@@ -1,0 +1,28 @@
+server:
+  port: 9527
+
+eureka:
+  client:
+    # 注册到Eureka的注册中心
+    register-with-eureka: true
+    # 获取注册实例列表
+    fetch-registry: true
+    service-url:
+      # 配置注册中心地址
+      defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka,http://eureka7003.com:7003/eureka
+  instance:
+    instance-id: gateway-9527.com
+    prefer-ip-address: true
+
+spring:
+  application:
+    name: flash-zuul-gateway
+
+
+#Eureka中的服务介绍
+info:
+  app.name: flash-cloud
+  company.name: www.flash.com
+  build.artifactId: $project.artifactId$
+  build.version: $project.version$
+

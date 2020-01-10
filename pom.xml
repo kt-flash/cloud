@@ -10,7 +10,6 @@
     <version>1.0-SNAPSHOT</version>
 
     <modules>
-        <module>flash-provider-8001</module>
         <module>flash-dao</module>
         <module>flash-es</module>
         <module>flash-common</module>
@@ -18,10 +17,13 @@
         <module>flash-eureka-7001</module>
         <module>flash-eureka-7002</module>
         <module>flash-eureka-7003</module>
+        <module>flash-provider-8001</module>
         <module>flash-provider-8002</module>
         <module>flash-provider-8003</module>
         <module>flash-consumer-feign</module>
         <module>flash-consumer-hystrix-dashboard</module>
+        <module>flash-zuul-gateway-9527</module>
+        <module>flash-config-3344</module>
     </modules>
 
 
