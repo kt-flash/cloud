@@ -24,6 +24,7 @@
         <module>flash-consumer-hystrix-dashboard</module>
         <module>flash-zuul-gateway-9527</module>
         <module>flash-config-3344</module>
+        <module>flash-config-client-3355</module>
     </modules>
 
 
