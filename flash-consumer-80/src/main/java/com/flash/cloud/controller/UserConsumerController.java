@@ -21,7 +21,7 @@ import org.springframework.web.client.RestTemplate;
  * @Date: 2020/1/2 16:23
  */
 @RestController
-@RequestMapping(value = "/consumer/user")
+@RequestMapping(value = "/user")
 public class UserConsumerController {
 
     @Value(value = "${rest.url.prefix}")

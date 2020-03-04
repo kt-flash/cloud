@@ -15,21 +15,20 @@ import org.springframework.web.bind.annotation.RequestMethod;
  * @Date: 2020/1/7 13:58
  */
 @FeignClient(value = "FLASH-PROVIDER",fallbackFactory = UserClientServiceFallbackFactory.class)
-@RequestMapping(value = "user")
 public interface UserClientService {
 
-    @RequestMapping(value = "add", method = RequestMethod.POST)
+    @RequestMapping(value = "/user/add", method = RequestMethod.POST)
     User add(@RequestBody User user);
 
-    @RequestMapping(value = "pageList", method = RequestMethod.POST)
+    @RequestMapping(value = "/user/pageList", method = RequestMethod.POST)
     Page pageList(@RequestBody @Validated ReqUserQueryDto reqUserDto);
 
-    @RequestMapping(value = "get/{id}", method = RequestMethod.GET)
+    @RequestMapping(value = "/user/get/{id}", method = RequestMethod.GET)
     User get(@PathVariable("id") String id);
 
-    @RequestMapping(value = "delete/{id}", method = RequestMethod.GET)
+    @RequestMapping(value = "/user/delete/{id}", method = RequestMethod.GET)
     boolean delete(@PathVariable("id") String id);
 
-    @RequestMapping(value = "update", method = RequestMethod.POST)
+    @RequestMapping(value = "/user/update", method = RequestMethod.POST)
     User update(@RequestBody User user);
 }

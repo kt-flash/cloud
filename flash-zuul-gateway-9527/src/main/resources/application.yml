@@ -18,6 +18,12 @@ spring:
   application:
     name: flash-zuul-gateway
 
+zuul:
+  routes:
+    sale:
+      #这个配置的含义为将所有/consumer/**的请求转发到服务名为flash-consumer-feign的节点进行处理
+      path: /consumer/**
+      service-id: flash-consumer-feign
 
 #Eureka中的服务介绍
 info:

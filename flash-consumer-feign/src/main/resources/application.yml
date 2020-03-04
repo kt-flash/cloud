@@ -1,13 +1,20 @@
 server:
   port: 80
 
+spring:
+  application:
+    name: flash-consumer-feign
+
 eureka:
   client:
     # 不注册到Eureka的注册中心
-    register-with-eureka: false
+    #register-with-eureka: false
     service-url:
       # 配置注册中心地址
       defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka,http://eureka7003.com:7003/eureka
+  instance:
+    instance-id: flash-consumer-feign
+    prefer-ip-address: true
 
 feign:
   hystrix:
