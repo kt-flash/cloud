@@ -29,17 +29,18 @@
         <module>flash-config-3344</module>
         <module>flash-config-client-3355</module>
     </modules>
-    
+
+![avatar](https://img-blog.csdn.net/2018091417041970?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM2NjkxNjgz/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
 
 ### 1.3. 项目启动
 
   1.启动flash-eureka-7001，flash-eureka-7002，flash-eureka-7003注册中心集群
-  
+
   2.启动flash-provider-8001，flash-provider-8002，flash-provider-8003服务提供者
-  
+
   3.启动flash-consumer-80或flash-consumer-feign服务消费者
-  
+
   4.启动flash-zuul-gateway-9527路由网关，可通过如http://myzuul.com:9527/consumer/user/get/10访问微服务
+
   
-  
-  
+

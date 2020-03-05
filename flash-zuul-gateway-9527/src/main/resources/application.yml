@@ -20,10 +20,12 @@ spring:
 
 zuul:
   routes:
-    sale:
+    my-route1:
       #这个配置的含义为将所有/consumer/**的请求转发到服务名为flash-consumer-feign的节点进行处理
       path: /consumer/**
       service-id: flash-consumer-feign
+  # 忽略所有微服务，只通过路由指定路径访问微服务
+  ignored-services: '*'
 
 #Eureka中的服务介绍
 info:
