@@ -11,7 +11,6 @@ import com.flash.common.validator.group.ValidationGroup1;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.BindingResult;
-import org.springframework.validation.ObjectError;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
@@ -21,7 +20,7 @@ import org.springframework.web.bind.annotation.*;
  */
 @RestController
 @RequestMapping(value = "/user")
-public class UserConsumerController {
+public class UserConsumerController extends BaseController{
 
 
     @Autowired
@@ -36,10 +35,9 @@ public class UserConsumerController {
     @RequestMapping(value = "add", method = RequestMethod.POST)
     public BaseResult add(@RequestBody @Validated(value = {ValidationGroup1.class}) ReqUserGroupDto reqUserDto,
                            BindingResult result) {
-        if(result != null && result.hasErrors()){
-            for (ObjectError error : result.getAllErrors()) {
-                return BaseResult.buildTipErrorResult(error.getDefaultMessage());
-            }
+        BaseResult baseResult = handleValidateError(result);
+        if(baseResult != null){
+            return baseResult;
         }
         User user = new User();
         BeanUtils.copyProperties(reqUserDto, user);
@@ -57,10 +55,9 @@ public class UserConsumerController {
     @RequestMapping(value = "update", method = RequestMethod.POST)
     public BaseResult update(@RequestBody @Validated ReqUserGroupDto reqUserDto,
                           BindingResult result) {
-        if(result != null && result.hasErrors()){
-            for (ObjectError error : result.getAllErrors()) {
-                return BaseResult.buildTipErrorResult(error.getDefaultMessage());
-            }
+        BaseResult baseResult = handleValidateError(result);
+        if(baseResult != null){
+            return baseResult;
         }
         User user = new User();
         BeanUtils.copyProperties(reqUserDto, user);
@@ -78,10 +75,9 @@ public class UserConsumerController {
     @RequestMapping(value = "pageList", method = RequestMethod.POST)
     public BaseResult pageList(@RequestBody @Validated ReqUserQueryDto reqUserDto,
                                BindingResult result) {
-        if(result != null && result.hasErrors()){
-            for (ObjectError error : result.getAllErrors()) {
-                return BaseResult.buildTipErrorResult(error.getDefaultMessage());
-            }
+        BaseResult baseResult = handleValidateError(result);
+        if(baseResult != null){
+            return baseResult;
         }
         Page page = userClientService.pageList(reqUserDto);
 
